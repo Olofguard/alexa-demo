@@ -1,0 +1,6 @@
+
+FROM nginx:1.13-alpine
+
+ADD ./deploy/lib/vhost.conf /etc/nginx/conf.d/default.conf
+ADD . /var/www
+WORKDIR /var/www

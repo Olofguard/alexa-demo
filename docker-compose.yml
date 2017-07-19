@@ -1,0 +1,29 @@
+version: '2'
+services:
+    web:
+        build:
+            context: .
+            dockerfile: ./deploy/web.docker
+        links:
+          - app:fpm
+        volumes:
+            - ./:/var/www
+        ports:
+            - 80:80
+    app:
+        build:
+            context: .
+            dockerfile: ./deploy/app.docker
+        volumes:
+            - ./:/var/www
+        environment:
+            - DB_HOST=mysql
+    mysql:
+        image: mysql:5.6
+        environment:
+            MYSQL_DATABASE: gentux-alexa
+            MYSQL_USER: alexa-dev
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_PASSWORD: secret
+        ports:
+            - 3309:3306

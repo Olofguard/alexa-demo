@@ -1,0 +1,8 @@
+FROM gentux/php-laravel:7.0
+
+ADD . /var/www/
+WORKDIR /var/www
+ADD ./deploy/lib/php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
+
+CMD /var/www/deploy/lib/start_app.sh
+
