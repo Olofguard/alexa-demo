@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+AlexaRoute::launch('alexa', 'App\Http\Controllers\AlexaController@launch');
