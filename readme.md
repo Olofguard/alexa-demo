@@ -16,4 +16,7 @@ $ composer install
 $ docker-compose up -d
 ```
 
+#### Resources
+* [Alexa Docs](https://developer.amazon.com/alexa)
+* [Laravel Docs](https://laravel.com)
  
