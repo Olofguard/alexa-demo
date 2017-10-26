@@ -19,4 +19,4 @@ $ docker-compose up -d
 #### Resources
 * [Alexa Docs](https://developer.amazon.com/alexa)
 * [Laravel Docs](https://laravel.com)
- 
+* [Alexa App Web Interface](https://alexa.amazon.com)
